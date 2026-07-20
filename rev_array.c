@@ -2,22 +2,31 @@
 
 int main()
 {
-    int arr[]={11,22,33,54,65};
+    int arr[]={0, 1, 88 ,99, 100};
 
-    int temp, n=sizeof(arr)/4-1;
+    int mid_val, temp, n=sizeof(arr)/4-1;
     printf("%d is size of array\n",n);
 
-    for(int i=0; i<n/2+1; i++ )
+    if(n%2==0)
+    {
+     mid_val=n/2;   
+    }
+    else mid_val=n/2+1;
+
+     printf("%d is middle index of array\n",mid_val);
+
+
+    for(int i=0; i<mid_val; i++ )
     {
         temp=arr[i];
         // printf("temp is %d\n",temp);
         arr[i]=arr[n-i];
         //  printf("arr[i] is %d\n",arr[i]);
         arr[n-i]=temp;
-        //  printf("arr[n-i] is %d\n",arr[n-i]);
+        //  printf("arr[n-i] is %d\n",arr[n-1-i]);
     }
 
-    for(int i=0; i<5; i++)
+    for(int i=0; i<=n; i++)
     {
         printf("%d ", arr[i]);
     }
