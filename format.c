@@ -2,6 +2,6 @@
 
 int main()
 {
-    unsigned int  x=4294967296;
-   printf("%u\n", x);
+  char n=+66.9;
+  printf("%c", n);
 }
