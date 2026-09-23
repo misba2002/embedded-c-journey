@@ -30,8 +30,18 @@ char *my_str_stok(char *str1, char *delim)
                 else
                 {
                     ptr[i]='\0';
-                    i++;
-                    return &ptr[start];
+                    
+                    if(i==0 && start ==0)
+                    {
+                        start++;
+                        break;
+                    }
+                    else
+                    {
+                        i++;
+                       return &ptr[start];
+                    }
+                    
                 }
 
             }
@@ -58,7 +68,7 @@ int main()
     scanf(" %[^\n]", delim);
 
     char *token = my_str_stok(str1, delim);
-    printf("Tokens:");
+    printf("Tokens:\n");
 
     while(token)
     {
