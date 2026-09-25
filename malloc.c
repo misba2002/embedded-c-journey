@@ -4,7 +4,7 @@
 
 int main()
 {
-    int *ptr = malloc(20);
+    int *ptr = malloc(20);// all the value will be initialized iwth gv
     if(ptr==NULL)
     {
         return 0;
