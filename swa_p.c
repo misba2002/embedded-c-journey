@@ -1,12 +1,7 @@
 #include<stdio.h>
 
-void swap(int *ptr1, int *ptr2)
-{
-    int temp=*ptr1;
-    *ptr1=*ptr2;
-    *ptr2=temp;
-}
 
+void swap(int *, int *);
 int main()
 {
     int n1=100, n2=99;
@@ -20,4 +15,13 @@ int main()
      printf("%zu\n", sizeof(ptr1));
 
     
+}
+
+void  swap(int *ptr1, int *ptr2)
+{
+    int temp=*ptr1;
+    *ptr1=*ptr2;
+    *ptr2=temp;
+
+  
 }
